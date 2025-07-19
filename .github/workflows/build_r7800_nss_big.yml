@@ -136,7 +136,7 @@ jobs:
           
       - name: Prepare config file
         run: |
-          cp diffconfig.r7800.all.nss .config
+          cp .github/workflows/diffconfig.r7800.all.nss .config
           make defconfig
 
       - name: Download package sources
