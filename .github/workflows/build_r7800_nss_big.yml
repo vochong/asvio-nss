@@ -32,12 +32,11 @@ jobs:
           git commit -m "Enable CONFIG_TCP_MD5SIG in config-6.6" || echo "No changes to commit"
           git push
 
-      #- name: Git rebase to upstream/main
-        #run: |
-          #git remote add upstream-openwrt https://git.openwrt.org/openwrt/openwrt.git
-          #git fetch upstream-openwrt
-          #git rebase upstream-openwrt/main
-          #git rebase --rebase-merges upstream-openwrt/main
+      - name: Git rebase to upstream/main
+        run: |
+          git remote add upstream-openwrt https://git.openwrt.org/openwrt/openwrt.git
+          git fetch upstream-openwrt
+          git rebase --rebase-merges upstream-openwrt/main
           
       - name: Search for kernel bump commits
         run: |  
@@ -127,12 +126,6 @@ jobs:
         run: |
           ./scripts/feeds update -a
           ./scripts/feeds install -a
-
-      - name: Git rebase to upstream/main
-        run: |
-          git remote add upstream-openwrt https://git.openwrt.org/openwrt/openwrt.git
-          git fetch upstream-openwrt
-          git rebase --rebase-merges upstream-openwrt/main
           
       - name: Prepare config file
         run: |
