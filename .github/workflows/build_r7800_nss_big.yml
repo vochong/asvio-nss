@@ -1,4 +1,4 @@
-name: Build Netgear R7800 NSS
+name: Build Netgear R7800 NSS non-CT
 on:
   workflow_dispatch:
 
