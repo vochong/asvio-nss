@@ -171,8 +171,8 @@ jobs:
       - name: Create a release
         uses: ncipollo/release-action@v1
         with:
-          name: "R7500v2 NSS Image ${{ env.NOW }}"
-          tag: "r7500v2-nss-${{ env.SHORT_SHA }}-${{ env.NOW }}"
+          name: "R7500v2 NSS Image ct-full-htt ${{ env.NOW }}"
+          tag: "r7500v2-nss-ct-full-htt-${{ env.SHORT_SHA }}-${{ env.NOW }}"
           generateReleaseNotes: true
           makeLatest: false
           artifacts: |
